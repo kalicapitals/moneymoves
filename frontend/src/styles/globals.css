@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-yellow-50 via-pink-100 to-blue-50 font-sans text-gray-800;
+}
+
+/* Optional: Custom bold cartoon shadows */
+.shadow-cartoon {
+  box-shadow: 4px 4px 0px #000;
+}
+
+.drop-shadow-cartoon {
+  filter: drop-shadow(3px 3px 0px black);
+}

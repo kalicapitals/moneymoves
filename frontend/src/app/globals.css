@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive, sans-serif;
+  background-color: #fef9e7;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffe0f0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff69b4;
+  border-radius: 20px;
+}
