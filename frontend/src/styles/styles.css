@@ -1,0 +1,17 @@
+/* styles.css */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Set Arial as the primary font */
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Line height for better readability */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; /* Reset heading margins */
+}
+
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+}
