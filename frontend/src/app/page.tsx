@@ -86,7 +86,13 @@ const FloatingEmoji = ({ emoji, x, y, delay = 0 }) => (
 
 export default function Home() {
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gray-100">
+      {/* Header Section */}
+      <header className="w-full bg-blue-600 text-white p-6 text-center">
+        <h1 className="text-4xl font-bold">Welcome to Kali Capitals</h1>
+        <p className="mt-2">Building a better future through investment and culture.</p>
+      </header>
+
       {/* Background gradient */}
       <motion.div 
         className="absolute inset-0 bg-gradient-to-br from-violet-600 via-indigo-600 to-purple-800 opacity-10"
@@ -111,63 +117,27 @@ export default function Home() {
       <FloatingEmoji emoji="🦋" x={-150} y={50} delay={4} />
       <FloatingEmoji emoji="🌸" x={150} y={300} delay={5} />
 
-      {/* Content */}
+      {/* Content Section */}
       <motion.div 
-        className="relative z-10 text-center"
+        className="relative z-10 text-center p-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.div className="relative">
-          {/* Rainbow glow effect */}
-          <motion.div
-            className="absolute -inset-1 bg-gradient-to-r from-violet-600 via-pink-500 to-cyan-500 rounded-lg opacity-20 blur-lg"
-            animate={{ 
-              scale: [1, 1.1, 1],
-              rotate: [0, 360],
-              opacity: [0.1, 0.2, 0.1]
-            }}
-            transition={{ 
-              duration: 10,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-          />
-          <motion.h1 
-            className="text-6xl font-bold mb-6 bg-gradient-to-r from-violet-600 via-pink-500 to-cyan-500 text-transparent bg-clip-text"
-            animate={{ 
-              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-            }}
-            transition={{ 
-              duration: 8,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-          >
-            Welcome to MyBlog
-          </motion.h1>
-        </motion.div>
-        
-        <motion.p 
-          className="text-xl text-gray-600 mb-8 relative"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          <motion.span
-            className="absolute -inset-1 bg-gradient-to-r from-violet-600 to-cyan-500 opacity-10 blur-lg"
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.1, 0.15, 0.1]
-            }}
-            transition={{ 
-              duration: 6,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-          />
-          Discover interesting articles and stories
-        </motion.p>
+        <h2 className="text-3xl font-semibold">Our Mission</h2>
+        <p className="text-xl text-gray-600 mb-8">
+          We invest in innovative startups that drive change and create value.
+        </p>
+
+        <h2 className="text-3xl font-semibold">Our People</h2>
+        <p className="text-xl text-gray-600 mb-8">
+          Our team is dedicated to fostering relationships and supporting entrepreneurs.
+        </p>
+
+        <h2 className="text-3xl font-semibold">Our Culture</h2>
+        <p className="text-xl text-gray-600 mb-8">
+          We believe in a culture of honesty, integrity, and collaboration.
+        </p>
 
         <motion.a
           href="/blog"
@@ -192,6 +162,11 @@ export default function Home() {
           </motion.span>
         </motion.a>
       </motion.div>
+
+      {/* Footer Section */}
+      <footer className="w-full bg-gray-800 text-white p-6 text-center">
+        <p>&copy; 2025 Kali Capitals. Made with love from Gobichettipalaiyam,TN, India for the world. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
