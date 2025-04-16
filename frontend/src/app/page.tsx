@@ -31,10 +31,10 @@ const Bird = ({ delay = 0, reverse = false, y = 0 }) => (
     }}
   >
     <motion.svg
-      width="48" // Doubled from 24
-      height="48" // Doubled from 24
+      width="48"
+      height="48"
       viewBox="0 0 24 24"
-      className="fill-violet-500/70" // Made more visible
+      className="fill-violet-500/70"
       animate={{
         scale: [1, 1.1, 0.9, 1],
         rotate: [0, 5, -5, 0]
@@ -52,7 +52,7 @@ const Bird = ({ delay = 0, reverse = false, y = 0 }) => (
 
 const FloatingEmoji = ({ emoji, x, y, delay = 0 }) => (
   <motion.div
-    className="absolute text-5xl" // Increased from text-2xl
+    className="absolute text-5xl"
     initial={{ x, y }}
     animate={{
       y: [y - 30, y + 30],
@@ -87,15 +87,9 @@ const FloatingEmoji = ({ emoji, x, y, delay = 0 }) => (
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gray-100">
-      {/* Header Section */}
-      <header className="w-full bg-blue-600 text-white p-6 text-center">
-        <h1 className="text-4xl font-bold">Welcome to Kali Capitals</h1>
-        <p className="mt-2">Building a better future through investment and culture.</p>
-      </header>
-
       {/* Background gradient */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-violet-600 via-indigo-600 to-purple-800 opacity-10"
+        className="absolute inset-0 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 opacity-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.1 }}
         transition={{ duration: 1 }}
@@ -124,24 +118,30 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl font-semibold">Our Mission</h2>
-        <p className="text-xl text-gray-600 mb-8">
-          We invest in innovative startups that drive change and create value.
+        <h2 className="text-2xl md:text-3xl font-semibold">Our Mission</h2>
+        <p className="text-lg md:text-xl text-gray-600 mb-4">
+          Investing in innovative startups that drive change and create value.
         </p>
 
-        <h2 className="text-3xl font-semibold">Our People</h2>
-        <p className="text-xl text-gray-600 mb-8">
-          Our team is dedicated to fostering relationships and supporting entrepreneurs.
+        <h2 className="text-2xl md:text-3xl font-semibold">Our People</h2>
+        <p className="text-lg md:text-xl text-gray-600 mb-4">
+          Dedicated to fostering relationships and supporting entrepreneurs.
         </p>
 
-        <h2 className="text-3xl font-semibold">Our Culture</h2>
-        <p className="text-xl text-gray-600 mb-8">
-          We believe in a culture of honesty, integrity, and collaboration.
+        <h2 className="text-2xl md:text-3xl font-semibold">Our Culture</h2>
+        <p className="text-lg md:text-xl text-gray-600 mb-8">
+          A culture of honesty, integrity, and collaboration.
+        </p>
+
+        {/* Testimonials Section */}
+        <h2 className="text-2xl md:text-3xl font-semibold">Testimonials</h2>
+        <p className="text-lg md:text-xl text-gray-600 mb-8">
+          "Kali Capitals has transformed our business!" - Happy Client
         </p>
 
         <motion.a
           href="/blog"
-          className="px-8 py-3 bg-gradient-to-r from-violet-600 via-pink-500 to-indigo-600 text-white font-medium rounded-full 
+          className="px-6 py-2 bg-gradient-to-r from-violet-600 via-pink-500 to-indigo-600 text-white font-medium rounded-full 
                     hover:shadow-lg hover:shadow-violet-500/50 transition-all duration-300 ease-in-out
                     hover:scale-105 inline-flex items-center gap-2 relative overflow-hidden group"
           whileHover={{ scale: 1.05 }}
@@ -165,7 +165,7 @@ export default function Home() {
 
       {/* Footer Section */}
       <footer className="w-full bg-gray-800 text-white p-6 text-center">
-        <p>&copy; 2025 Kali Capitals. Made with love from Gobichettipalaiyam,TN, India for the world. All rights reserved.</p>
+        <p>&copy; 2023 Kali Capitals. All rights reserved.</p>
       </footer>
     </div>
   );
