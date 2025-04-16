@@ -165,7 +165,7 @@ export default function Home() {
 
       {/* Footer Section */}
       <footer className="w-full bg-gray-800 text-white p-6 text-center">
-        <p>&copy; 2023 Kali Capitals. All rights reserved.</p>
+        <p>&copy; 2025 Kali Capitals. Made with love in Gobichettipalaiyam,TN,India for the world, All rights reserved.</p>
       </footer>
     </div>
   );
