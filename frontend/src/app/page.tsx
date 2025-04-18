@@ -50,40 +50,6 @@ const Bird = ({ delay = 0, reverse = false, y = 0 }) => (
   </motion.div>
 );
 
-const FloatingEmoji = ({ emoji, x, y, delay = 0 }) => (
-  <motion.div
-    className="absolute text-5xl"
-    initial={{ x, y }}
-    animate={{
-      y: [y - 30, y + 30],
-      rotate: [-10, 10],
-      scale: [1, 1.1, 1]
-    }}
-    transition={{
-      y: {
-        duration: 4,
-        repeat: Infinity,
-        repeatType: "reverse",
-        delay
-      },
-      rotate: {
-        duration: 3,
-        repeat: Infinity,
-        repeatType: "reverse",
-        delay
-      },
-      scale: {
-        duration: 2,
-        repeat: Infinity,
-        repeatType: "reverse",
-        delay
-      }
-    }}
-  >
-    {emoji}
-  </motion.div>
-);
-
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gray-100">
@@ -102,14 +68,6 @@ export default function Home() {
       <Bird delay={7} y={250} reverse />
       <Bird delay={3} y={50} />
       <Bird delay={8} y={300} reverse />
-
-      {/* Floating Emojis */}
-      <FloatingEmoji emoji="🌟" x={-250} y={100} delay={0} />
-      <FloatingEmoji emoji="✨" x={250} y={150} delay={1} />
-      <FloatingEmoji emoji="🌈" x={-200} y={200} delay={2} />
-      <FloatingEmoji emoji="💫" x={200} y={250} delay={3} />
-      <FloatingEmoji emoji="🦋" x={-150} y={50} delay={4} />
-      <FloatingEmoji emoji="🌸" x={150} y={300} delay={5} />
 
       {/* Content Section */}
       <motion.div 

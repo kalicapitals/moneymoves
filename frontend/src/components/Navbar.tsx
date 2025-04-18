@@ -22,10 +22,9 @@ export default function Navbar() {
   return (
     <motion.nav className="navbar">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center space-x-3">
-            <span className="text-3xl">🕊️</span>
-            <span className="font-bold text-2xl tracking-tight">
+        <div className="flex justify-between items-center h-24"> {/* Increased height */}
+          <Link href="/" className="flex items-center mx-auto"> {/* Centered logo */}
+            <span className="font-bold text-6xl tracking-tight"> {/* Increased font size to 8xl */}
               Kali Capitals
             </span>
           </Link>
@@ -44,12 +43,12 @@ export default function Navbar() {
             <Link
               key={item.path}
               href={item.path}
-              className={`block px-3 py-2 rounded-lg transition-all duration-300 ${pathname === item.path ? 'active' : 'text-white'}`}
+              className={`block px-5 py-4 rounded-lg transition-all duration-300 ${pathname === item.path ? 'active' : 'text-white'}`} // Increased padding
               onClick={() => setIsOpen(false)} // Close menu on link click
             >
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl">{item.icon}</span>
-                <span className="font-medium text-lg">{item.label}</span>
+              <div className="flex items-center space-x-3">
+                <span className="text-4xl">{item.icon}</span> {/* Increased icon size */}
+                <span className="font-medium text-xl">{item.label}</span> {/* Increased label size */}
               </div>
             </Link>
           ))}
